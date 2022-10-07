@@ -8,16 +8,9 @@ FAGL_ITEMS_CH_DATA,
 
 
 METHOD if_ex_fagl_items_ch_data~change_items.
-
-
-
    DATA ls_items LIKE LINE OF ct_items.
 
-
-
    LOOP AT ct_items INTO ls_items.
-
-
 
      IF ls_items–hkont IS NOT INITIAL.
         SELECT SINGLE txt50
@@ -29,7 +22,7 @@ METHOD if_ex_fagl_items_ch_data~change_items.
           modify ct_items from ls_items.
       ENDIF.
     ENDLOOP.
-  ENDMETHOD.
+ ENDMETHOD.
 
 
 
